@@ -1,0 +1,84 @@
+/*font import from GOOGLE*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');
+
+body {
+  font-family: "Varela Round", sans-serif;
+}
+
+h1{
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-size: 72px;
+}
+
+.carousel-container{
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.image-box {
+  width: 453.17px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  /*안보이면 숨겨진 것임*/
+  display : flex;
+  flex-direction: row;
+}
+
+.image-box > img {
+  margin-right: 10px;
+}
+
+.arrow{
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 3em;
+/*absolute이니까 window창 기준*/
+  position: absolute;
+  top: 50%;
+/*transform: translate(x,y)*/
+  transform: translate(0,-50%);
+  cursor: pointer;
+}
+
+.left::before{
+/*Font Awesome 6 Free 에서만 적용되는 왼쪽 화살표 아이콘*/
+  content: "\f060";
+}
+.left{
+  left: 0;
+}
+
+.right::before{
+/*Font Awesome 6 Free 에서만 적용되는 오른쪽 화살표 아이콘*/
+  content: "\f061";
+}
+.right{
+  right: 0;
+}
+
+.dot-list{
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  transform: translate(-50%);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dot-item{
+  width: 13px;
+  height: 13px;
+  background-color: black;
+  border-radius: 50%;
+  list-style: none;
+  margin: 3px;
+  cursor: pointer;
+}
+
+
